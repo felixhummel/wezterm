@@ -11,6 +11,8 @@ config.adjust_window_size_when_changing_font_size = false
 config.color_scheme = "Phrak1 (terminal.sexy)"
 config.tab_bar_at_bottom = true
 config.window_decorations = "NONE"
+-- https://wezterm.org/faq.html?h=liga#how-do-i-disable-ligatures
+config.harfbuzz_features = { 'calt = 0', 'clig = 0', 'liga = 0' }
 
 local function map(mods, key, action)
 	return { mods = mods, key = key, action = action }
